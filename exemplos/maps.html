@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Buscar e auto selecionar campos </title>
+    <script src="../socialdev/js/jquery.1.11.2.js" type="text/javascript"></script>
+    <script src="../socialdev/js/socialdev.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAXiwOxOs-kLIQHF36v2E1gpwmgy6xOwvw"></script>
+
+    <link rel="stylesheet" href="../socialdev/css/modal.css">
+    <script>
+        //Close with Escape Button
+        window.onkeydown = function( event ) {
+            if ( event.keyCode === 27 ) {
+               // document.getElementById('close').click();
+            }
+        };
+
+        $(function(){
+    $('body').click(function(){
+        social_dev.maps('auto_sel',{
+            'state':'#estado',
+            'city':'#cidade',
+            'key':'asd',
+            'cep':29172140
+        });
+
+    });
+
+        });
+    </script>
+</head>
+<body>
+
+
+
+
+<select id="estado">
+    <option value="">Selecione</option>
+    <option value="ES">espírito Sánto</option>
+    <option value="Bahia">Bahia</option>
+    <option value="Bahia">Paraná</option>
+</select>
+
+
+
+<select id="cidade">
+    <option value="">Selecione</option>
+    <option value="Serra">Serra(Serra)</option>
+    <option value="Serra">dcastro</option>
+    <option value="Serra">Abapã(Castro)</option>
+    <option value="Bahia">Vitoria</option>
+</select>
+
+</body>
+</html>
